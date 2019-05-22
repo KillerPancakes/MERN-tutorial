@@ -4,9 +4,11 @@
   "description": "Mern tut from https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
